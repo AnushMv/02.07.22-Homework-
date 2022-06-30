@@ -2,7 +2,7 @@ function getUniqueValue(arr){
     let uniqueValueArr = [];
     for(let k = 0, j= 0, e = 0; k < arr.length; k++){
         for(let i = 1; i < arr.length; i++){
-            if(arr[j] != arr[i]){   
+            if(arr[j] !== arr[i]){   
                j++;
             }else{
                 break;
