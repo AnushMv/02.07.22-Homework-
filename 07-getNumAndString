@@ -1,0 +1,14 @@
+function getNumAndString(arr){
+    let numArr = [];
+    let strArr = [];
+    for(let i = 0, k = 0, j = 0; i < arr.length; i++){
+        if(typeof(arr[i]) === 'string'){
+            strArr[k] = arr[i];
+            k++;
+        } else{
+            numArr[j] = arr[i];
+            j++;
+        }
+    }
+    return [numArr, strArr]
+}
