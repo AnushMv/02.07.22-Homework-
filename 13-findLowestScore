@@ -1,0 +1,9 @@
+function findLowestScore(evaluations){
+    let lowestScore = evaluations[0].score;
+    for(let i = 1; i < evaluations.length; i++){
+        if(lowestScore > evaluations[i].score){
+            lowestScore = evaluations[i].score;
+        }
+    }
+    return lowestScore;
+}
