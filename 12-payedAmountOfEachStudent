@@ -1,3 +1,4 @@
+թերի է չի ստացվել
 function getSumOfEachpayment(payments){
     let sum = 0;
     let arrOfSum = [];
