@@ -1,3 +1,5 @@
+թերի է չի ստացվել
+
 function getUniqueValue(arr){
     let uniqueValueArr = [];
     for(let k = 0, j= 0, e = 0; k < arr.length; k++){
@@ -11,4 +13,21 @@ function getUniqueValue(arr){
         }
     }
     return uniqueValueArr;
+}
+
+
+function getUnique(arr){
+    let testArr = arr;
+    let uniqueArr = [];
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 1, k = 0; j < testArr.length; j++){
+            if(arr[i] === testArr[j]){
+                break;
+            } else if(arr[i] !== uniqueArr[k]){
+                uniqueArr[k] = testArr[j];
+                k++;
+            }
+        }
+    }
+    return uniqueArr;
 }
