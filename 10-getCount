@@ -1,0 +1,10 @@
+function getCount(payments){
+    let comparePayment = 1500;
+    let count = 0;
+    for(let i = 0; i < payments.length; i++){
+            if(payments[i].payedAmount > comparePayment){
+                count++;
+            }
+    }
+    return count;
+}
