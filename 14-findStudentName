@@ -1,0 +1,11 @@
+function findStudentName(evaluations){
+    let lowestScore = evaluations[0].score;
+    let studentName;
+    for(let i = 1; i < evaluations.length; i++){
+        if(lowestScore > evaluations[i].score){
+            lowestScore = evaluations[i].score;
+            studentName = evaluations[i].studentName;
+        }
+    }
+    return studentName;
+}
