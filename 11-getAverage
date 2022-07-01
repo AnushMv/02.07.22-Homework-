@@ -1,0 +1,10 @@
+function getAverageOfPayments(payments){
+    let sum = 0;
+    let count = 0;
+    for(let i = 0; i < payments.length; i++){
+            sum = sum + payments[i].payedAmount;
+            count++;
+            }
+    let average = sum / count;
+    return average;
+}
