@@ -1,0 +1,7 @@
+function getSumOfPayments(payments){
+    let sumOfPayment = 0;
+    for(let i = 0; i < payments.length; i++){
+            sumOfPayment = sumOfPayment + payments[i].payedAmount;
+    }
+    return sumOfPayment;
+}
