@@ -1,0 +1,9 @@
+function findMaxPayment(payments){
+    let maxPayment = payments[0].payedAmount;
+    for(let i = 1; i < payments.length; i++){
+        if(maxPayment < payments[i].payedAmount){
+            maxPayment = payments[i].payedAmount
+        }
+    }
+    return maxPayment;
+}
