@@ -1,20 +1,25 @@
 թերի է չի ստացվել
-function getSumOfEachpayment(payments){
-    let sum = 0;
-    let arrOfSum = [];
-    for(let i = 0, k =0; i < payments.length; i++){
-        if(!payments[i].studentId){
-            sum = payments[i].payedAmount;
+function getStudentTotalPayment(payments) {
+  const eachStdPayments = {};
+
+  for (let student of payments) {
+    let studentId = student.studentId;
+        if (eachStdPayments[studentId] === undefined) {
+           eachStdPayments[studentId] = [student];
         } else {
-            sum = sum + payments[i].payedAmount;
-            k++;
-        }
-        arrOfSum[i] = {
-          studentId: payments[k].studentId,
-          studentName: payments[k].studentName,
-          payedAmount: sum,
-          
-        }
+           eachStdPayments[studentId] = student;
+         }
     }
-return arrOfSum;
-}
+    let studentsTotalPayment = [];
+let sum = 0;
+    for(let j = 0, k = 0; j < eachStdPayments.length; j++){
+        sum = sum + studentsTotalPayment[k].paymentAmount;
+        k++
+        studentsTotalPayment[j] = {};
+        studentsTotalPayment[j].studentId = eachstudentPayment[j].studentId;
+        studentsTotalPayment[j].studentName = eachstudentPayment[j].studentName;
+        studentsTotalPayment[j].paymentAmount = sum;
+    }
+
+  return studentsTotalPayment;
+  }
