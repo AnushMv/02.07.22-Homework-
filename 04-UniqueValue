@@ -1,5 +1,5 @@
 թերի է չի ստացվել
-
+1.
 function getUniqueValue(arr){
     let uniqueValueArr = [];
     for(let k = 0, j= 0, e = 0; k < arr.length; k++){
@@ -15,7 +15,7 @@ function getUniqueValue(arr){
     return uniqueValueArr;
 }
 
-
+2.
 function getUnique(arr){
     let testArr = arr;
     let uniqueArr = [];
