@@ -1,33 +1,18 @@
-թերի է չի ստացվել
-1.
-function getUniqueValue(arr){
-    let uniqueValueArr = [];
-    for(let k = 0, j= 0, e = 0; k < arr.length; k++){
-        for(let i = 1; i < arr.length; i++){
-            if(arr[j] !== arr[i]){   
-               j++;
-            }else{
-                break;
-            } 
-            uniqueValueArr[e] = arr[j];
-        }
-    }
-    return uniqueValueArr;
-}
-
-2.
-function getUnique(arr){
-    let testArr = arr;
-    let uniqueArr = [];
+function uniqValue(arr){
+    let obj = {};
     for(let i = 0; i < arr.length; i++){
-        for(let j = 1, k = 0; j < testArr.length; j++){
-            if(arr[i] === testArr[j]){
-                break;
-            } else if(arr[i] !== uniqueArr[k]){
-                uniqueArr[k] = testArr[j];
-                k++;
-            }
+        let key = arr[i];
+        if(obj[key] === undefined){
+            obj[key] = 1;
+        } else{
+            obj[key]++;
         }
     }
-    return uniqueArr;
+    let result = [];
+    for(let key in obj){
+        if(obj[key] === 1){
+            result.push(key);
+        }
+    }
+  return result;
 }
