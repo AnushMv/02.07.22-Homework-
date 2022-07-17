@@ -1,3 +1,4 @@
+1st way
 function getCommon(arr1,arr2){
     let commonArr = [];
     for(let i = 0, k = 0; i < arr1.length; i++){
@@ -10,3 +11,42 @@ function getCommon(arr1,arr2){
     }
     return commonArr;
 }
+
+2nd way
+function getCommon(arr1, arr2) {
+  let commonArr = [];
+  let obj = {};
+  for (let i = 0, k = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        obj[arr1[i]] = 1;
+        k++;
+      }
+    }
+  }
+  for(let key in obj){
+  commonArr.push(key);
+  }
+  return commonArr;
+}
+
+
+3rd way
+function getCommon(arr1, arr2) {
+  let commonArr = [];
+  let obj = {};
+  for (let i = 0, k = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        obj[arr1[i]] = 1;
+        k++;
+      }
+    }
+  }
+  
+  return Object.keys(obj);
+}
+
+
+
+
