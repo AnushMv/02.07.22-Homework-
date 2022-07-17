@@ -1,7 +1,30 @@
+1st way
 function findExeption(arr){
     for(let i = 0; i < arr.length; i++){
         if(arr[i] != arr[i+1]){
             return arr[i+1];
         }
     }    
+}
+
+2nd way
+
+function findExeption(arr) {
+  let obj = {};
+  let key;
+  for (let i = 0; i < arr.length; i++) {
+    key = arr[i];
+    if (obj[key] === undefined) {
+      obj[key] = 1;
+    } else {
+      obj[key]++;
+
+    }
+  }
+  for (let key in obj) {
+    if (obj[key] === 1) {
+      
+      return key;
+    }
+  }
 }
