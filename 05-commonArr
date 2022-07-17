@@ -16,16 +16,15 @@ function getCommon(arr1,arr2){
 function getCommon(arr1, arr2) {
   let commonArr = [];
   let obj = {};
-  for (let i = 0, k = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     for (let j = 0; j < arr2.length; j++) {
       if (arr1[i] === arr2[j]) {
         obj[arr1[i]] = 1;
-        k++;
       }
     }
   }
-  for(let key in obj){
-  commonArr.push(key);
+  for (let key in obj) {
+    commonArr.push(key);
   }
   return commonArr;
 }
@@ -35,15 +34,14 @@ function getCommon(arr1, arr2) {
 function getCommon(arr1, arr2) {
   let commonArr = [];
   let obj = {};
-  for (let i = 0, k = 0; i < arr1.length; i++) {
+  for (let i = 0; i < arr1.length; i++) {
     for (let j = 0; j < arr2.length; j++) {
       if (arr1[i] === arr2[j]) {
         obj[arr1[i]] = 1;
-        k++;
       }
     }
   }
-  
+
   return Object.keys(obj);
 }
 
